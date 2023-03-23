@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/registrationFragment">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.ui.gim.frag.GimFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_gim">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_dashboard"
+            app:destination="@id/action_navigation_home_to_navigation_dashboard" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.geeksfit.ui.dashboard.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.geeksfit.ui.dashboard.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password">
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_verificationFragment"
+            app:destination="@id/verificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.ui.dashboard.VerificationFragment"
+        android:label="VerificationFragment" />
+    <fragment
+        android:id="@+id/newPasswordFragment"
+        android:name="com.ui.dashboard.NewPasswordFragment"
+        android:label="fragment_new_password"
+        tools:layout="@layout/fragment_new_password">
+        <action
+            android:id="@+id/action_newPasswordFragment_to_succesPasswordFragment"
+            app:destination="@id/succesPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/succesPasswordFragment"
+        android:name="com.ui.dashboard.SuccessPasswordFragment"
+        android:label="fragment_succes_password"
+        tools:layout="@layout/fragment_succes_password">
+        <action
+            android:id="@+id/action_succesPasswordFragment_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.ui.dashboard.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.geeksfit.ui.gim.ui.DetailFragment"
+        android:label="DetailFragment" />
+    <fragment
+        android:id="@+id/payCardFragment"
+        android:name="com.ui.pay.fragments.PayCardFragment"
+        android:label="PayCardFragment" />
+    <fragment
+        android:id="@+id/payFragment"
+        android:name="com.ui.pay.fragments.PayFragment"
+        android:label="PayFragment" />
+    <fragment android:id="@+id/placeholder" />
+    <fragment
+        android:id="@+id/placePayFragment"
+        android:name="com.ui.pay.fragments.PlacePayFragment"
+        android:label="PlacePayFragment" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.ui.dashboard.RegisterFragment"
+        android:label="RegisterFragment" />
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="com.example.geeksfit2.SplashActivity"
+        android:label="activity_splash"
+        tools:layout="@layout/activity_splash" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.geeksfit2.MainActivity"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
